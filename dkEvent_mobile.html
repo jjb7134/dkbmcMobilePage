@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DKBMC Event</title>
+    
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <!-- css -->
+    <style>
+        ::placeholder{color: #000; font-family: 'NexonLv1Gothic'; font-size:3vw;font-weight: 400;}
+           
+        body{margin: 0px 8%; color: white; font-family: 'NexonLv1Gothic'; font-size:3vw;font-weight: 400; background-image: url('1page_bg.png');}
+        input[type=text],input[type=phone] {width: 100%; height: 2em;}
+        input{margin-top: 2%;}
+        textarea{width: 100%; height: 100px;}
+        form label{font-family: 'NexonLv1Gothic'; font-size: 3.7vw; font-weight: 400; }
+        
+        
+        .title_s{text-align: center; margin: 3em 0 0.7em; font-family: 'NexonLv1Gothic'; font-size: 3.7vw; font-weight: 400;}
+        .title_l{text-align: center; margin: 0 0 1em; font-family: 'NexonLv1Gothic'; font-size: 7vw; font-weight: 700;}
+        .title_img{display: inline-block; vertical-align: middle; }
+        .name_wrap,.phone,.email,.company{margin-bottom: 4%;}
+        .name{display: inline-block;}
+        .nameInput{width: 100%; padding: 0;}
+        .te1{margin-top: 2%; }
+        .te2{margin-top: 2.5%;}
+        .techeck{font-size: 3vw; }
+        .btn{width: 100%; height: 2em; color: white; background: #2d2d2d; border: none; font-size: 3.7vw; font-weight: 700; margin: 5% 0 15%;}
+        .logo{width: 25%; height: 5%;}
+    </style>
+    <!--  -->
+</head>
+<body>
+    <!-- li{list-style: none;}
+        input[type="text"] {width:calc(100%);}
+
+        .title{text-align: center;}
+        .name{display:inline-block; width:40%;} -->
+
+        <!-- 제목 -->
+    <div class="title">
+        <!-- 윗제목 -->
+        <div class="title_s">인더스트리포럼 FOR 제조업</div>
+        <!-- 아래 제목 -->
+        <div class="title_l">
+            <div class="title_img" ><img style="width: 1em;" src="apple_left.png"></div>
+            <div class="title_img">DK BMC 이벤트</div>  
+            <div class="title_img"><img style="width:1em;" src="apple_right.png"></div>
+    </div>
+
+
+    <!-- <div class="title">
+        <div class="title_s">인더스트리포럼 FOR 제조업</div>
+        <div class="title_l"><img class="title_img" src="apple_left.png" alt=""> DK BMC 이벤트 <img class="title_img" src="apple_right.png" alt=""></div>
+    </div> -->
+
+    <form action="#" class="formwrap">
+        <div class="name_wrap" style="width: 100%;">
+            <div class="name" style="margin-right: 2.7%; width: 48%;">
+                <label class="firstName">·성</label><br> <!-- 속성으로 점 넣는 방법   -->
+                <input class="nameInput" type="text">
+            </div>
+            <div class="name" style="width: 48%;">
+                <label class="lastName">·이름</label><br>
+                <input class="nameInput" type="text">
+            </div>
+            
+        </div>
+        <div class="phone">
+            <label class="phone">·휴대폰 번호</label>
+            <input type="phone" placeholder="숫자만 입력해주세요.">
+        </div>
+        <div class="email">
+            <label class="email">·이메일</label>
+            <input type="text">
+        </div>
+        <div class="company">
+            <label class="company">·회사명</label>
+            <input type="text">
+        </div>
+        <div class="indi">
+            <label class="indi">·개인정보 수집 및 이용에 대한 동의</label><br>
+            <textarea class="te1">개인정보 수집 및 이용에 대한 동의(필수)
+                ㈜디케이비엠시 고객상담, 문의 답변, 이벤트 참여 등을 위해 아래와 같이 개인정보를 수집·이용합니다.
+                1. 개인정보의 수집·이용 목적 : 고객문의, 접수, 결과 안내
+                2. 개인정보의 수집항목 : 이름, 휴대전화번호, 이름, 회사명, 고객문의 및 기타 고객이 직접 입력한 내용
+                3. 개인정보의 보유 및 이용기간 : 상담 문의 접수 시점 및 상담 완료 후 6개월이며, 세부사항은 '개인정보처리 방침'을 확인 (단, 관련 법령에 의거 보존할 필요성이 있는 경우에는 관련 법령에 따라 보존 가능)
+                ※ 동의를 거부할 권리가 있습니다. 다만, 필수 동의 거부 시 서비스가 제한될 수 있습니다.</textarea><br>
+            <input style=" vertical-align: -11%;" type="checkbox" id="check1" checked>
+            <label for="check1" class="techeck">개인정보 수집/이용에 대해 동의 합니다.(필수)</label><br>
+            <textarea class="te2">마케팅 및 광고활용 동의(선택)
+                ㈜디케이비엠시에서 제공하는 이벤트 및 서비스(제휴서비스 포함)안내 등을 위해 마케팅 이용에 동의하여 주시기 바랍니다.
+                1. 개인정보의 수집·이용 목적 : 이벤트 참여, 공지사항 전달, 광고성 정보 전달
+                2. 개인정보의 수집항목 : 이름, 휴대전화번호, 이름, 회사명, 고객문의 및 기타 고객이 직접 입력한 내용
+                3. 개인정보의 보유 및 이용기간 : 상담 문의 접수 시점 및 상담 완료 후 6개월이며, 세부사항은 '개인정보처리 방침'을 확인 (단, 관련 법령에 의거 보존할 필요성이 있는 경우에는 관련 법령에 따라 보존 가능)
+                ※ 동의를 거부할 권리가 있습니다. 다만 필수 동의 거부 시 상기 목적에 명시된 서비스를 받으실 수 없습니다.</textarea><br>
+                <div >
+                    <input style=" vertical-align: -11%;" type="checkbox" id="check2">
+                     <label for="check2" class="techeck">마케팅 및 광고 활용에 동의합니다.(선택)</label><br>
+                </div>
+            
+        </div>
+        <div >
+            <input class="btn" type="submit" value="제 출 하 기">
+        </div>
+    </form>
+    <div style="display:flex; justify-content:center; align-items:center; margin-bottom:4%;">
+        <img class="logo" src="logo.png" alt="">
+    </div>
+</body>
+</html>
