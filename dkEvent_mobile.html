@@ -11,10 +11,10 @@
     <style>
         ::placeholder{color: #000; font-family: 'NexonLv1Gothic'; font-size:3vw;font-weight: 400;}
            
-        body{margin: 0px 8%; color: white; font-family: 'NexonLv1Gothic'; font-size:3vw;font-weight: 400; background-image: url('1page_bg.png');}
+        body{margin: 0px 8%; color: white; font-family: 'NexonLv1Gothic'; font-size:3vw;font-weight: 400; background-image: url('1page_bg.png'); background-size: cover;}
         input[type=text],input[type=phone] {width: 100%; height: 2em;}
         input{margin-top: 2%;}
-        textarea{width: 100%; height: 100px;}
+        .textarea{width: 100%; height: 100px; border: 1px solid white; color: #000; background: white; overflow-y: scroll;}
         form label{font-family: 'NexonLv1Gothic'; font-size: 3.7vw; font-weight: 400; }
         
         
@@ -24,90 +24,238 @@
         .name_wrap,.phone,.email,.company{margin-bottom: 4%;}
         .name{display: inline-block;}
         .nameInput{width: 100%; padding: 0;}
-        .te1{margin-top: 2%; }
+        .te1{margin-top: 2%;}
         .te2{margin-top: 2.5%;}
+
         .techeck{font-size: 3vw; }
-        .btn{width: 100%; height: 2em; color: white; background: #2d2d2d; border: none; font-size: 3.7vw; font-weight: 700; margin: 5% 0 15%;}
+        .btn{cursor: pointer; width: 100%; height: 2em; color: white; background: #2d2d2d; border: none; font-size: 3.7vw; font-weight: 700; margin: 5% 0 15%;}
         .logo{width: 25%; height: 5%;}
+        .before{display: block;}
+
+        .after{display: none; background-image: none; background: #bb2024;}
+        .wrap{margin: 80% 0 70%; text-align: center;}
+        .title{font-size:7vw;font-weight: 700; margin-bottom: 10%;}
+        .af{font-size:5vw; margin-bottom: 10%;}
+        .thanks{font-size:5vw;}
     </style>
-    <!--  -->
 </head>
 <body>
-    <!-- li{list-style: none;}
-        input[type="text"] {width:calc(100%);}
-
-        .title{text-align: center;}
-        .name{display:inline-block; width:40%;} -->
-
+   <div class="before" id="before">
         <!-- 제목 -->
-    <div class="title">
-        <!-- 윗제목 -->
-        <div class="title_s">인더스트리포럼 FOR 제조업</div>
-        <!-- 아래 제목 -->
-        <div class="title_l">
-            <div class="title_img" ><img style="width: 1em;" src="apple_left.png"></div>
-            <div class="title_img">DK BMC 이벤트</div>  
-            <div class="title_img"><img style="width:1em;" src="apple_right.png"></div>
-    </div>
-
-
-    <!-- <div class="title">
-        <div class="title_s">인더스트리포럼 FOR 제조업</div>
-        <div class="title_l"><img class="title_img" src="apple_left.png" alt=""> DK BMC 이벤트 <img class="title_img" src="apple_right.png" alt=""></div>
-    </div> -->
-
-    <form action="#" class="formwrap">
-        <div class="name_wrap" style="width: 100%;">
-            <div class="name" style="margin-right: 2.7%; width: 48%;">
-                <label class="firstName">·성</label><br> <!-- 속성으로 점 넣는 방법   -->
-                <input class="nameInput" type="text">
+        <div class="title">
+            <!-- 윗제목 -->
+            <div class="title_s">인더스트리포럼 FOR 제조업</div>
+            <!-- 아래 제목 -->
+            <div class="title_l">
+                <div class="title_img" ><img style="width: 1em;" src="apple_left.png"></div>
+                <div class="title_img">DK BMC 이벤트</div>  
+                <div class="title_img"><img style="width:1em;" src="apple_right.png"></div>
             </div>
-            <div class="name" style="width: 48%;">
-                <label class="lastName">·이름</label><br>
-                <input class="nameInput" type="text">
-            </div>
-            
         </div>
-        <div class="phone">
-            <label class="phone">·휴대폰 번호</label>
-            <input type="phone" placeholder="숫자만 입력해주세요.">
-        </div>
-        <div class="email">
-            <label class="email">·이메일</label>
-            <input type="text">
-        </div>
-        <div class="company">
-            <label class="company">·회사명</label>
-            <input type="text">
-        </div>
-        <div class="indi">
-            <label class="indi">·개인정보 수집 및 이용에 대한 동의</label><br>
-            <textarea class="te1">개인정보 수집 및 이용에 대한 동의(필수)
-                ㈜디케이비엠시 고객상담, 문의 답변, 이벤트 참여 등을 위해 아래와 같이 개인정보를 수집·이용합니다.
-                1. 개인정보의 수집·이용 목적 : 고객문의, 접수, 결과 안내
-                2. 개인정보의 수집항목 : 이름, 휴대전화번호, 이름, 회사명, 고객문의 및 기타 고객이 직접 입력한 내용
-                3. 개인정보의 보유 및 이용기간 : 상담 문의 접수 시점 및 상담 완료 후 6개월이며, 세부사항은 '개인정보처리 방침'을 확인 (단, 관련 법령에 의거 보존할 필요성이 있는 경우에는 관련 법령에 따라 보존 가능)
-                ※ 동의를 거부할 권리가 있습니다. 다만, 필수 동의 거부 시 서비스가 제한될 수 있습니다.</textarea><br>
-            <input style=" vertical-align: -11%;" type="checkbox" id="check1" checked>
-            <label for="check1" class="techeck">개인정보 수집/이용에 대해 동의 합니다.(필수)</label><br>
-            <textarea class="te2">마케팅 및 광고활용 동의(선택)
-                ㈜디케이비엠시에서 제공하는 이벤트 및 서비스(제휴서비스 포함)안내 등을 위해 마케팅 이용에 동의하여 주시기 바랍니다.
-                1. 개인정보의 수집·이용 목적 : 이벤트 참여, 공지사항 전달, 광고성 정보 전달
-                2. 개인정보의 수집항목 : 이름, 휴대전화번호, 이름, 회사명, 고객문의 및 기타 고객이 직접 입력한 내용
-                3. 개인정보의 보유 및 이용기간 : 상담 문의 접수 시점 및 상담 완료 후 6개월이며, 세부사항은 '개인정보처리 방침'을 확인 (단, 관련 법령에 의거 보존할 필요성이 있는 경우에는 관련 법령에 따라 보존 가능)
-                ※ 동의를 거부할 권리가 있습니다. 다만 필수 동의 거부 시 상기 목적에 명시된 서비스를 받으실 수 없습니다.</textarea><br>
-                <div >
-                    <input style=" vertical-align: -11%;" type="checkbox" id="check2">
-                     <label for="check2" class="techeck">마케팅 및 광고 활용에 동의합니다.(선택)</label><br>
+    
+    
+    
+        <form action="/complete.html" class="formwrap" id="qr_form" name="qr_form" accept-charset="utf-8" method="get" id="pardot_qr_form">
+            <div class="name_wrap" style="width: 100%;">
+                <div class="name" style="margin-right: 2.7%; width: 48%;">
+                    <label class="firstName">·성</label><br> <!-- 속성으로 점 넣는 방법   -->
+                    <input class="nameInput" id="firstName" name="firstName" type="text">
                 </div>
-            
+                <div class="name" style="width: 48%;">
+                    <label class="lastName">·이름</label><br>
+                    <input class="nameInput" id="lastName" name="lastName" type="text">
+                </div>
+            </div>
+            <div class="phone">
+                <label class="phone">·휴대폰 번호</label>
+                <input type="phone" id="phone" name="phone" placeholder="숫자만 입력해주세요.">
+            </div>
+            <div class="email">
+                <label class="email">·이메일</label>
+                <input type="text" id="email" name="email">
+            </div>
+            <div class="company">
+                <label class="company">·회사명</label>
+                <input type="text" id="company" name="company">
+            </div>
+
+            <div class="indi">
+                <label class="indi">·개인정보 수집 및 이용에 대한 동의</label><br>
+                <p class="textarea te1">
+                    개인정보 수집 및 이용에 대한 동의(필수)<br>
+                    ㈜디케이비엠시 고객상담, 문의 답변, 이벤트 참여 등을 위해 아래와 같이 개인정보를 수집·이용합니다.<br>
+                    1. 개인정보의 수집·이용 목적 : 고객문의, 접수, 결과 안내<br>
+                    2. 개인정보의 수집항목 : 이름, 휴대전화번호, 이름, 회사명, 고객문의 및 기타 고객이 직접 입력한 내용<br>
+                    3. 개인정보의 보유 및 이용기간 : 상담 문의 접수 시점 및 상담 완료 후 6개월이며, 세부사항은 '개인정보처리 방침'을 확인 (단, 관련 법령에 의거 보존할 필요성이 있는 경우에는 관련 법령에 따라 보존 가능)<br>
+                    ※ 동의를 거부할 권리가 있습니다. 다만, 필수 동의 거부 시 서비스가 제한될 수 있습니다.
+                </p><br>
+                <div style="margin: -7.5% 0 2%;">
+                    <input style=" vertical-align: -11%;" type="checkbox" id="check1" name="PiCheck" value="예">
+                    <label for="check1" class="techeck">개인정보 수집/이용에 대해 동의 합니다.(필수)</label><br>
+                    <input type="hidden" name="PiCheck" value="아니오" id="PiCheckNo">
+                </div>
+                <p class="textarea te2">
+                    마케팅 및 광고활용 동의(선택)<br>
+                    ㈜디케이비엠시에서 제공하는 이벤트 및 서비스(제휴서비스 포함)안내 등을 위해 마케팅 이용에 동의하여 주시기 바랍니다.<br>
+                    1. 개인정보의 수집·이용 목적 : 이벤트 참여, 공지사항 전달, 광고성 정보 전달<br>
+                    2. 개인정보의 수집항목 : 이름, 휴대전화번호, 이름, 회사명, 고객문의 및 기타 고객이 직접 입력한 내용<br>
+                    3. 개인정보의 보유 및 이용기간 : 상담 문의 접수 시점 및 상담 완료 후 6개월이며, 세부사항은 '개인정보처리 방침'을 확인 (단, 관련 법령에 의거 보존할 필요성이 있는 경우에는 관련 법령에 따라 보존 가능)<br>
+                    ※ 동의를 거부할 권리가 있습니다. 다만 필수 동의 거부 시 상기 목적에 명시된 서비스를 받으실 수 없습니다.
+                </p><br>
+                    <div style="margin: -7.5% 0 8%;">
+                        <input style=" vertical-align: -11%;" type="checkbox" id="check2" name="MarketingCheck" value="예">
+                        <label for="check2" class="techeck">마케팅 및 광고 활용에 동의합니다.(선택)</label><br>
+                        <input type="hidden" name="MarketingCheck" value="아니오" id="MarketingCheckNo">
+                    </div>
+            </div>
+            <div >
+                <input class="btn" type="button" value="제 출 하 기" onclick="validate()">
+            </div>
+        </form>
+
+        <div style="display:flex; justify-content:center; align-items:center; margin-bottom:4%;">
+            <img class="logo" src="logo.png" alt="">
         </div>
-        <div >
-            <input class="btn" type="submit" value="제 출 하 기">
-        </div>
-    </form>
-    <div style="display:flex; justify-content:center; align-items:center; margin-bottom:4%;">
-        <img class="logo" src="logo.png" alt="">
     </div>
+
+<!-- <div class="after" id="after">
+    <div class="wrap">
+        <div class="title">[제출 완료]</div>
+        <div class="af">DK BMC 부스에서<br>이벤트 참여하시고 상품 받아가세요!</div>
+        <div class="thanks">감사합니다.</div>
+    </div>
+    <div style="display:flex; justify-content:center; align-items:center; margin-bottom:4%;">
+        <a class="logo" href="dkEvent_mobile.html"><img style="width: 100%;" src="logo.png" alt="" ></a>
+    </div>
+</div> -->
+
+    <!-- JS -->
+    <script>
+
+        let form = document.getElementById('qr_form');
+        let firstname = document.getElementById('firstName');
+        let lastname = document.getElementById('lastName');
+        let email = document.getElementById('email');
+        let phone = document.getElementById('phone');
+        let company = document.getElementById('company');
+        let checkoutHistory = document.getElementById('check1');
+        let checkoutHistory2 = document.getElementById('check2');
+        let before = document.getElementById('before');
+        let after = document.getElementById('after');
+
+        // Validation Rules
+        function validate() {
+
+            let reg_name = /^[ㄱ-ㅎ|가-힣|a-z|A-Z|]+$/; //한글 또는 영문 정규식
+            let reg_email= /^[A-Za-z0-9_]+[A-Za-z0-9.]*[@]{1}[A-Za-z0-9]+[A-Za-z0-9]*[.]{1}[A-Za-z]{2,6}$/; //이메일 정규식
+            let reg_email_final=/([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/; //최종 이메일 정규식
+
+            //성 입력여부
+            if(firstname.value === ""){
+                firstname.focus();
+                alert("성을 입력해주세요.")
+                return false;
+            }
+            
+            //성 유효성 검사
+            if (!reg_name.test(firstname.value)){
+                alert("성을 확인해주세요.")
+                Firstname.focus();
+                return false;
+            }
+
+
+            //이름 입력여부
+            if(lastname.value === ""){
+                lastname.focus();
+                alert("이름을 입력해주세요.")
+                return false;
+            }
+
+            //이름 유효성 검사
+            if (!reg_name.test(lastname.value)){
+                alert("이름을 확인해주세요.")
+                lastname.focus();
+                return false;
+            }
+
+            //폰번호 입력
+            if(phone.value === ""){
+                phone.focus();
+                alert("번호를 입력해주세요.")
+                return false;
+            }
+
+            //폰번호 유효성
+            if (isNaN(phone.value)){
+                alert("전화번호 숫자만 입력해 주세요. Ex) 01012345678")
+                phone.focus();
+                return false;
+            }
+
+            //email 입력여부
+            if(email.value === ""){
+                email.focus();
+                alert("이메일을 입력해주세요.")
+                return false;
+            }
+            //email 유효성
+            if (!reg_email_final.test(email.value)){
+                alert("이메일을 확인해주세요.")
+                email.focus();
+                return false;
+            }
+            //회사 입력
+            if(company.value === ""){
+                company.focus();
+                alert("회사를 입력해주세요.")
+                return false;
+            }
+
+            //체크박스 미체크
+            if (!checkoutHistory.checked) {
+                alert("개인정보 수집/이용에 동의해 해주세요.");
+                checkoutHistory.focus();
+                return false;
+            }
+            //체크박스(개인정보동의)
+            if(checkoutHistory.checked){
+                document.getElementById('PiCheckNo').disabled=true;
+            }
+            //체크박스(마케팅동의) 
+            if(checkoutHistory2.checked){
+                document.getElementById('MarketingCheckNo').disabled=true;
+            } 
+            
+
+            //완료
+            form.submit();
+            
+            //alert("감사합니다");
+        }
+
+        
+
+    </script>
 </body>
 </html>
+
+
+<!-- 
+        
+        
+        before.style.display="none";
+            after.style.display="block";
+            form.addEventListener('submit', submitEvent);
+function submitEvent(){
+            location.href = 'complete.html';
+        }
+        
+        
+        
+        
+        
+        
+        
+        -->
+

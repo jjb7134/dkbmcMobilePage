@@ -1,2 +1,6 @@
-# dkbmcMobilePage
+# dkbmc 인더스트리 for 제조업 이벤트 qr페이지, 모바일ver.
+
+프로젝트 인원:3명
+역할 : 퍼블리싱,기능구현,이벤트처리,salesforce pardot 연동 및 폼필드 구성
+기간:22.10.24~22.10.28
  
